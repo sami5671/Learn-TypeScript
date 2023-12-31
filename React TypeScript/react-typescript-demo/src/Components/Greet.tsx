@@ -1,16 +1,19 @@
 type greetPorps = {
   name: string;
-  messageCount: number;
+  messageCount?: number;
   isLoggedIn: boolean;
 };
 
-export const Greet = (props: greetPorps) => {
+const Greet = (props: greetPorps) => {
+  // ================DESTRUCTURE PROPS=================================================
+  const { messageCount = 0, name, isLoggedIn } = props;
+  // =================================================================
   return (
     <div>
       <h2>
-        {props.isLoggedIn
-          ? ` Welcome!! {props.name} this is the world of typescript. You have
-        {props.messageCount} Emails On your Spam Folder`
+        {isLoggedIn
+          ? `Welcome!! ${name} this is the world of typescript. You have
+        ${messageCount} Emails On your Spam Folder`
           : "welcome guest"}
       </h2>
     </div>

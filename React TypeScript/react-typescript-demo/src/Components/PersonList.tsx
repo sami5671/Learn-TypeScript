@@ -5,7 +5,7 @@ type personListProps = {
   }[];
 };
 
-export const PersonList = (props: personListProps) => {
+const PersonList = (props: personListProps) => {
   return (
     <div>
       <h1>person lists are here </h1>
