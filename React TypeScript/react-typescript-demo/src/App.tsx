@@ -1,4 +1,5 @@
 import Button from "./Components/Button";
+import Container from "./Components/Container";
 import EventButton from "./Components/EventButton";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
@@ -52,6 +53,11 @@ function App() {
         }
       ></EventButton>
       <Input value="" handleChange={(event) => console.log(event)}></Input>
+
+      {/* style props  */}
+      <Container
+        style={{ border: "1px solid black", padding: "1rem" }}
+      ></Container>
     </div>
   );
 }
