@@ -1,5 +1,7 @@
 import Button from "./Components/Button";
 import Container from "./Components/Container";
+import Box from "./Components/Context/Box";
+import ThemeContext from "./Components/Context/ThemeContext";
 import EventButton from "./Components/EventButton";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
@@ -7,6 +9,9 @@ import Input from "./Components/Input";
 import Oscar from "./Components/Oscar";
 import Person from "./Components/Person";
 import PersonList from "./Components/PersonList";
+import Counter from "./Components/State/Counter";
+import Login from "./Components/State/Login";
+import User from "./Components/State/User";
 import Status from "./Components/Status";
 
 function App() {
@@ -58,6 +63,19 @@ function App() {
       <Container
         style={{ border: "1px solid black", padding: "1rem" }}
       ></Container>
+
+      {/* useState  */}
+      <Login></Login>
+
+      <User></User>
+
+      {/* useReducer */}
+      <Counter></Counter>
+
+      {/* useContext */}
+      <ThemeContext>
+        <Box></Box>
+      </ThemeContext>
     </div>
   );
 }
