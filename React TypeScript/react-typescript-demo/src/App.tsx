@@ -17,6 +17,9 @@ import Status from "./Components/Status";
 import User2 from "./Components/Context/User2";
 import DomRef from "./Components/Ref/DomRef";
 import MutableRef from "./Components/Ref/MutableRef";
+import ClassCounter from "./Components/Class/ClassCounter";
+import Private from "./Components/Auth/Private";
+import Profile from "./Components/Auth/Profile";
 
 function App() {
   // =================================================================
@@ -89,6 +92,11 @@ function App() {
 
       <DomRef></DomRef>
       <MutableRef></MutableRef>
+
+      {/*  class component */}
+      <ClassCounter message="hello Typescript"></ClassCounter>
+      {/*  Component Prop */}
+      <Private isLoggedIn={true} Component={Profile}></Private>
     </div>
   );
 }
