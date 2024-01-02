@@ -2,6 +2,7 @@ import Button from "./Components/Button";
 import Container from "./Components/Container";
 import Box from "./Components/Context/Box";
 import ThemeContext from "./Components/Context/ThemeContext";
+import UserContextProvider from "./Components/Context/UserContextProvider";
 import EventButton from "./Components/EventButton";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
@@ -13,6 +14,9 @@ import Counter from "./Components/State/Counter";
 import Login from "./Components/State/Login";
 import User from "./Components/State/User";
 import Status from "./Components/Status";
+import User2 from "./Components/Context/User2";
+import DomRef from "./Components/Ref/DomRef";
+import MutableRef from "./Components/Ref/MutableRef";
 
 function App() {
   // =================================================================
@@ -76,6 +80,15 @@ function App() {
       <ThemeContext>
         <Box></Box>
       </ThemeContext>
+
+      <UserContextProvider>
+        <User2></User2>
+      </UserContextProvider>
+
+      {/* useRef hook */}
+
+      <DomRef></DomRef>
+      <MutableRef></MutableRef>
     </div>
   );
 }
